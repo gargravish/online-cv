@@ -44,7 +44,7 @@
   ],
   "experience": [
     {
-      "title": "Customer Engineer - Data Specialist",
+      "title": "Customer Engineer - Data Analytics Specialist",
       "company": "Google Cloud",
       "location": "London, UK",
       "dates": "July 2022 – Present",
@@ -52,7 +52,8 @@
         "<strong>Accelerated Revenue Growth:</strong> Drove 10x+ monthly recurring revenue growth (from $1.3K to >$10K/month in 8 months) for a key FinTech client via end-to-end GCP data platform architecture and adoption guidance (Dataflow, Pub/Sub, Dataplex).",
         "<strong>Customer Success & Technical Leadership:</strong> Led successful engagements across FinTech, HealthTech, Retail, Telecoms; designed solutions, mentored colleagues, led workshops, built impactful demos.",
         "<strong>GenAI Innovation & Thought Leadership:</strong> Co-developed a GenAI multilingual AlloyDB chatbot demo (official Google blog). Authored popular technical blogs (10k+ views). Built & open-sourced GitHub demos.",
-        "<strong>Technical Expertise:</strong> Deep expertise in BigQuery, Dataflow, Pub/Sub, Spanner, Dataplex, migrations. Re-certified Professional Data Engineer."
+        "<strong>Technical Expertise:</strong> Deep expertise in BigQuery, Dataflow, Pub/Sub, Spanner, Dataplex, migrations. Re-certified Professional Data Engineer.",
+        "<strong>Additional Skills:</strong> Project management, client relationship management, technical leadership."
       ]
     },
     {
@@ -64,7 +65,8 @@
         "<strong>Revenue Generation & Strategic Wins:</strong> Led technical strategy contributing to ~$2M+ TCV with major clients (Media, IT Services, Logistics, Retail, FinTech).",
         "<strong>Pioneering Cloud Migrations:</strong> Spearheaded India's first real-time AWS DynamoDB-to-Cloud Spanner migration (Logistics). Architected Oracle-to-BigQuery migrations (Datastream, Pub/Sub).",
         "<strong>Subject Matter Expertise & Thought Leadership:</strong> Primary technical contact (SME) for Firebase in India. Authored blogs & presented at industry workshops (APAC - Best of Next).",
-        "<strong>Crisis Management:</strong> Successfully managed and resolved a significant India-wide Firebase service outage."
+        "<strong>Crisis Management:</strong> Successfully managed and resolved a significant India-wide Firebase service outage.",
+        "<strong>Team Collaboration:</strong> Contributed to SAP on GCP opportunities and database assessments, ultimately lead to multiple $$M wins."
       ]
     },
      {
@@ -75,7 +77,8 @@
       "responsibilities": [
         "<strong>Cloud Migration Leadership (U.S. Region):</strong> Directed cloud migration strategy, planning, and pre-sales support (RFP/RFI, solution defense).",
         "<strong>Team & Delivery Management:</strong> Managed cloud consultants, overseeing end-to-end assessment, migration, design, and operationalization.",
-        "<strong>Strategic Solution Design:</strong> Developed next-gen database architectures, translated requirements into competitive, cost-optimized (TCO, BOM) cloud transformation plans."
+        "<strong>Strategic Solution Design:</strong> Developed next-gen database architectures, translated requirements into competitive, cost-optimized (TCO, BOM) cloud transformation plans.",
+        "<strong>Sales & Collaboration:</strong> Assisted sales teams with creating bill of materials (BOM), total cost of ownership (TCO) calculations, and other commercial documents. Participated in solution defense presentations and customer briefings."
       ]
     },
     {
@@ -114,13 +117,13 @@
       "openSource": [
           {
               "name": "Centralized Medicine Delivery System (Healthcare Demo)",
-              "description": "End-to-end demo using Python, Cloud Spanner, Vision API, Firebase, GCE, Load Balancers.",
+              "description": "This end-to-end technical demonstration showcases the seamless integration of Python with Google Cloud's enterprise-grade services including Cloud Spanner, Vision API, Firebase, Google Compute Engine, and Load Balancers. The presentation emphasizes Cloud Spanner's PostgreSQL compatibility through PGAdapter, illustrating the straightforward migration path for PostgreSQL-based applications to Spanner's globally distributed architecture. This migration capability presents significant opportunities for organizations seeking scalability without sacrificing SQL compatibility or transactional consistency.",
               "tags": ["Hackathon Winner"],
               "link": null
           },
           {
               "name": "Multi-Cloud Data Replication (Spanner & DynamoDB)",
-              "description": "Project enabling real-time, bi-directional data replication between GCP and AWS native databases.",
+              "description": "Project enabling real-time, bi-directional data replication between GCP and AWS native databases and thus enable a $$M opportunity win.",
               "link": null
           },
           {

@@ -9,7 +9,7 @@
     "github": "https://github.com/gargravish",
     "medium": "https://garg-ravish.medium.com/"
   },
-  "summary": "Highly accomplished Cloud Data Architect and Customer Engineer with 19+ years of experience architecting and delivering complex, scalable data and AI/ML solutions on GCP, AWS, and Azure for global enterprises. Proven ability to drive significant revenue growth (10x+ in 8 months for a FinTech client) and customer success through strategic cloud adoption, data migration, and platform modernization. Deep technical expertise spans data warehousing, real-time analytics, RDBMS/NoSQL databases (BigQuery, Spanner, DynamoDB), machine learning principles, and GenAI applications. Passionate innovator, recognized thought leader (200+ Medium followers, popular technical blogs with 10k+ views), and open-source contributor (active GitHub demos). Certified Google Cloud Professional Cloud Architect & Data Engineer, dedicated to translating cutting-edge technology into tangible business value.",
+  "summary": "Highly accomplished ,<strong>Cloud Data Architect and Customer Engineer with 19+ years of experience</strong> architecting and delivering complex, scalable data and AI/ML solutions on GCP, AWS, and Azure for global enterprises. Proven ability to drive significant revenue growth (10x+ in 8 months for a FinTech client) and customer success through strategic cloud adoption, data migration, and platform modernization. Deep technical expertise spans data warehousing, real-time analytics, RDBMS/NoSQL databases (BigQuery, Spanner, DynamoDB), machine learning principles, and GenAI applications. Passionate innovator, recognized thought leader (200+ Medium followers, popular technical blogs with 10k+ views), and open-source contributor (active GitHub demos). Certified Google Cloud Professional Cloud Architect, Data Engineer & Machine Learning Engineer, dedicated to translating cutting-edge technology into tangible business value.",
   "skills": [
     {
       "category": "Cloud Architecture & Strategy",
@@ -34,7 +34,7 @@
     {
       "category": "DevOps & Infrastructure",
       "icon": "fas fa-cogs",
-      "items": ["Docker", "Microservices", "CI/CD", "IaC (Terraform)", "Performance", "Backup/Recovery", "Virtualization"]
+      "items": ["Docker", "Microservices", "CI/CD", "Performance", "Backup/Recovery", "Virtualization"]
     },
     {
       "category": "Leadership & Business",

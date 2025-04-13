@@ -81,7 +81,7 @@
     {
       "title": "Sr. Sales Consultant - Engineered Systems",
       "company": "Oracle",
-      "location": "Location", // Add location if known
+      "location": "Noida, INDIA",
       "dates": "Mar 2014 – Oct 2014",
       "responsibilities": [
         "<strong>Pre-Sales & Technical Evangelism:</strong> SME for Oracle DB/Exadata, led POCs/POVs for ISVs.",
@@ -91,7 +91,7 @@
      {
         "title": "Consultant (Database & UNIX Architect)",
         "company": "HCL Technologies",
-        "location": "Location", // Add location if known
+        "location": "Noida, INDIA", 
         "dates": "Sept 2012 – Mar 2014",
         "responsibilities": [
              "<strong>Architecture Authority:</strong> Lead architect (Oracle, MS-SQL, MySQL, UNIX) for a major UAE bank.",
@@ -101,7 +101,7 @@
     {
         "title": "Sr. System Engineer (Oracle DBA - SME)",
         "company": "Computer Sciences Corporation (CSC)",
-        "location": "Location", // Add location if known
+        "location": "Noida, INDIA", 
         "dates": "Oct 2005 – Sept 2012",
         "responsibilities": [
             "<strong>Oracle Expertise & Migration Lead:</strong> Specialized in Oracle DBA tasks & migrations for NA/EU clients; led SUSE Linux transitions.",
@@ -116,7 +116,7 @@
               "name": "Centralized Medicine Delivery System (Healthcare Demo)",
               "description": "End-to-end demo using Python, Cloud Spanner, Vision API, Firebase, GCE, Load Balancers.",
               "tags": ["Hackathon Winner"],
-              "link": null // Add specific project link if available on GitHub
+              "link": null
           },
           {
               "name": "Multi-Cloud Data Replication (Spanner & DynamoDB)",
@@ -155,7 +155,8 @@
     }
   ],
   "certifications": [
-    { "name": "Google Cloud Professional Data Engineer", "year": 2023, "tagClass": "!bg-yellow-100 !text-yellow-800" },
+    { "name": "Google Cloud Machine Learning Engineer", "year": 2025, "tagClass": "!bg-yellow-100 !text-yellow-800" },
+    { "name": "Google Cloud Professional Data Engineer", "year": 2025, "tagClass": "!bg-yellow-100 !text-yellow-800" },
     { "name": "Google Cloud Professional Cloud Architect", "year": null, "tagClass": "!bg-yellow-100 !text-yellow-800" },
     { "name": "Microsoft Azure Solutions Architect Expert", "year": null, "tagClass": "!bg-blue-100 !text-blue-800" },
     { "name": "AWS Solutions Architect – Professional", "year": null, "tagClass": "!bg-orange-100 !text-orange-800" },

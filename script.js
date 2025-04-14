@@ -99,11 +99,11 @@ function renderContributions(contributions) {
     const grid = document.getElementById('contributions-grid');
     grid.innerHTML = ''; // Clear existing
 
-    // Open Source Projects Card
-    if (contributions.openSource && contributions.openSource.length > 0) {
+    // Key Projects Card (formerly Open Source)
+    if (contributions["Key Projects"] && contributions["Key Projects"].length > 0) {
         const osCard = document.createElement('div');
         osCard.className = 'card';
-        let projectsHTML = contributions.openSource.map(proj => `
+        let projectsHTML = contributions["Key Projects"].map(proj => `
             <li class="mb-3">
                 <strong>${proj.name}:</strong> ${proj.description}
                 ${proj.tags ? proj.tags.map(tag => `<span class="tag !bg-green-100 !text-green-800 ml-2">${tag}</span>`).join('') : ''}
@@ -111,7 +111,7 @@ function renderContributions(contributions) {
             </li>
         `).join('');
         osCard.innerHTML = `
-            <h3 class="flex items-center"><i class="fab fa-github mr-2 text-gray-800"></i>Open Source Demos</h3>
+            <h3 class="flex items-center"><i class="fab fa-github mr-2 text-gray-800"></i>Key Projects</h3>
             <p class="mb-2">Explore projects at: <a href="${document.getElementById('header-links').querySelector('a[title=GitHub]').href}" target="_blank" class="text-blue-600 hover:underline font-semibold">github.com/gargravish</a></p>
             <ul class="list-none p-0">${projectsHTML}</ul>
         `;

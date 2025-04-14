@@ -114,7 +114,7 @@
     }
   ],
   "contributions": {
-      "Key OpenSource Projects": [
+      "Key Projects": [
           {
           "name": "Custom Lineage Manager for Google Cloud Dataplex",
           "description": "Developed a command-line tool to manage custom lineage processes in Google Cloud Data Catalog, enabling digital-native and enterprise customers to streamline data governance and lineage tracking. This solution empowers organizations to efficiently list, create, delete, and view lineage processes, driving better data management and unlocking scalable implementation opportunities across diverse industries.",

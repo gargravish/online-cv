@@ -45,8 +45,13 @@ function renderPersonalInfo(info) {
     const headerLinks = document.getElementById('header-links');
 
     headerInfo.innerHTML = `
-        <h1 class="text-3xl font-bold">${info.name}</h1>
-        <p class="text-xl text-blue-200">${info.title}</p>
+        <div class="flex items-center gap-4">
+            <img src="RavishGarg_Headshot.jpeg" alt="${info.name}" class="w-16 h-16 rounded-full object-cover border-2 border-white shadow-md" />
+            <div>
+                <h1 class="text-3xl font-bold">${info.name}</h1>
+                <p class="text-xl text-blue-200">${info.title}</p>
+            </div>
+        </div>
     `;
 
     headerLinks.innerHTML = `

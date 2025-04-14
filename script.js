@@ -102,39 +102,54 @@ function renderContributions(contributions) {
     // Key Projects Card (formerly Open Source)
     if (contributions["Key Projects"] && contributions["Key Projects"].length > 0) {
         const osCard = document.createElement('div');
-        osCard.className = 'card';
-        let projectsHTML = contributions["Key Projects"].map(proj => `
-            <li class="mb-3">
-                <strong>${proj.name}:</strong> ${proj.description}
-                ${proj.tags ? proj.tags.map(tag => `<span class="tag !bg-green-100 !text-green-800 ml-2">${tag}</span>`).join('') : ''}
-                ${proj.link ? ` <a href="${proj.link}" target="_blank" class="text-blue-600 hover:underline">[Link]</a>` : ''}
-            </li>
-        `).join('');
+        osCard.className = 'card md:col-span-2'; // Make it span the full width
+        
+        // Create a grid for projects within the card
+        let projectsHTML = `
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-3">
+                ${contributions["Key Projects"].map(proj => `
+                    <div class="project-item">
+                        <h4 class="font-semibold text-blue-700">${proj.name}</h4>
+                        <p class="text-sm">${proj.description}</p>
+                        ${proj.tags ? proj.tags.map(tag => `<span class="tag !bg-green-100 !text-green-800 ml-2">${tag}</span>`).join('') : ''}
+                        ${proj.link ? `<a href="${proj.link}" target="_blank" class="text-blue-600 hover:underline text-sm">[View Project]</a>` : ''}
+                    </div>
+                `).join('')}
+            </div>
+        `;
+        
         osCard.innerHTML = `
             <h3 class="flex items-center"><i class="fab fa-github mr-2 text-gray-800"></i>Key Projects</h3>
             <p class="mb-2">Explore projects at: <a href="${document.getElementById('header-links').querySelector('a[title=GitHub]').href}" target="_blank" class="text-blue-600 hover:underline font-semibold">github.com/gargravish</a></p>
-            <ul class="list-none p-0">${projectsHTML}</ul>
+            ${projectsHTML}
         `;
         grid.appendChild(osCard);
     }
 
-    // Blog Card
+    // Blog Card - Now as a separate card
     if (contributions.blog) {
         const blogCard = document.createElement('div');
         blogCard.className = 'card';
+        
+        // Add a loading placeholder for blog posts
         blogCard.innerHTML = `
             <h3 class="flex items-center"><i class="fab fa-medium mr-2 text-gray-800"></i>Technical Blog</h3>
-             <p class="mb-2">Read articles at: <a href="${contributions.blog.url}" target="_blank" class="text-blue-600 hover:underline font-semibold">${contributions.blog.url.split('//')[1]}</a></p>
+            <p class="mb-2">Read articles at: <a href="${contributions.blog.url}" target="_blank" class="text-blue-600 hover:underline font-semibold">${contributions.blog.url.split('//')[1]}</a></p>
             <p>${contributions.blog.description}</p>
+            <div id="medium-posts" class="mt-3">
+                <p class="text-sm text-gray-500">Loading latest blog posts...</p>
+            </div>
         `;
         grid.appendChild(blogCard);
+        
+        // Fetch latest Medium posts
+        fetchLatestMediumPosts(contributions.blog.url);
     }
 
-     // Speaking Card
+    // Speaking Card - Now as a separate card
     if (contributions.speaking && contributions.speaking.length > 0) {
         const speakCard = document.createElement('div');
-        // Make it span potentially 2 columns if needed and space allows
-        speakCard.className = 'card md:col-span-2';
+        speakCard.className = 'card';
         let speakingHTML = contributions.speaking.map(speak => `
             <li><strong>${speak.event}:</strong> ${speak.topic}</li>
         `).join('');
@@ -146,6 +161,60 @@ function renderContributions(contributions) {
     }
 }
 
+// Function to fetch latest Medium posts
+async function fetchLatestMediumPosts(mediumUrl) {
+    try {
+        // Extract username from Medium URL
+        const username = mediumUrl.split('/').filter(Boolean).pop();
+        
+        // Use RSS2JSON API to fetch Medium RSS feed
+        const rssUrl = `https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@${username}`;
+        
+        const response = await fetch(rssUrl);
+        const data = await response.json();
+        
+        if (data.status === 'ok') {
+            // Get the latest 3 posts
+            const latestPosts = data.items.slice(0, 3);
+            
+            // Update the DOM
+            const mediumPostsContainer = document.getElementById('medium-posts');
+            if (mediumPostsContainer) {
+                if (latestPosts.length > 0) {
+                    let postsHTML = '<ul class="list-none p-0">';
+                    latestPosts.forEach(post => {
+                        // Format the publication date
+                        const pubDate = new Date(post.pubDate);
+                        const formattedDate = pubDate.toLocaleDateString('en-US', { 
+                            year: 'numeric', 
+                            month: 'short', 
+                            day: 'numeric' 
+                        });
+                        
+                        postsHTML += `
+                            <li class="mb-2 pb-2 border-b border-gray-100">
+                                <a href="${post.link}" target="_blank" class="text-blue-700 hover:underline font-medium">${post.title}</a>
+                                <p class="text-xs text-gray-500">${formattedDate}</p>
+                            </li>
+                        `;
+                    });
+                    postsHTML += '</ul>';
+                    mediumPostsContainer.innerHTML = postsHTML;
+                } else {
+                    mediumPostsContainer.innerHTML = '<p class="text-sm text-gray-500">No posts found</p>';
+                }
+            }
+        } else {
+            throw new Error('Failed to fetch Medium posts');
+        }
+    } catch (error) {
+        console.error('Error fetching Medium posts:', error);
+        const mediumPostsContainer = document.getElementById('medium-posts');
+        if (mediumPostsContainer) {
+            mediumPostsContainer.innerHTML = '<p class="text-sm text-gray-500">Unable to load latest blog posts. Please visit the blog directly.</p>';
+        }
+    }
+}
 
 function renderEducation(education) {
     const list = document.getElementById('education-list');

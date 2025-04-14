@@ -23,6 +23,21 @@
         h4 { font-size: 1rem; font-weight: 600; margin-bottom: 0.25rem; color: #111827;}
         .date-location { color: #4b5563; font-size: 0.875rem; margin-bottom: 0.75rem;}
         .loading { text-align: center; padding: 4rem; font-size: 1.5rem; color: #6b7280; }
+        
+        /* New styles for the summary section */
+        .summary-content { display: flex; flex-direction: column; gap: 1.25rem; }
+        .intro-text { font-size: 1.25rem; line-height: 1.6; color: #1e3a8a; margin-bottom: 0.5rem; }
+        .summary-bullets ul { list-style: none; padding-left: 0; }
+        .summary-bullets li { position: relative; padding-left: 1.75rem; margin-bottom: 0.75rem; line-height: 1.5; }
+        .summary-bullets li:before { content: "•"; position: absolute; left: 0.5rem; color: #3b82f6; font-weight: bold; }
+        .highlight { color: #1e3a8a; font-weight: 600; }
+        .closing-text { font-style: italic; color: #4b5563; }
+        
+        /* Responsive adjustments for summary */
+        @media (min-width: 768px) {
+            .summary-bullets ul { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.75rem 1.5rem; }
+            .summary-bullets li { margin-bottom: 0.5rem; }
+        }
     </style>
 </head>
 <body class="leading-relaxed">
@@ -100,17 +115,19 @@
             </section>
 
             <!-- **** NEW CATEGORY EXAMPLE **** -->
-            <!-- To add a new category (e.g., "Awards"):
+            <!-- 
+            To add a new category (e.g., "Awards"):
                  1. Add an "awards": [...] array to resume-data.json
                  2. Uncomment the section below
                  3. Add a renderAwards(data) function in script.js
                  4. Call renderAwards(data) in the main load function in script.js
             -->
-            <!--
+
+            <!-- Uncomment this section when adding awards
             <section id="awards" class="mb-10">
                 <h2 class="section-title">Awards & Recognition</h2>
                 <div id="awards-list" class="space-y-4">
-                    <!-- Awards list injected here -->
+                    Awards list will be injected here by JavaScript
                 </div>
             </section>
             -->
